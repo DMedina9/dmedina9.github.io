@@ -1,94 +1,20 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sistema de gestión para secretarios de congregación - Secretario API">
-    <title>Secretario - Sistema de Gestión</title>
-    <link rel="icon" href="favicon.ico">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.18/dayjs.min.js" integrity="sha512-FwNWaxyfy2XlEINoSnZh1JQ5TRRtGow0D6XcmAWmYCRgvqOUTnzCxPc9uF35u5ZEpirk1uhlPVA19tflhvnW1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.18/locale/es-mx.min.js" integrity="sha512-dIk5t6xgFnZTHhp527gfoTLBxLv/PMW4nl8EUDEg/+s8u6/aqpSVifLefkx3drYOKl/RlJ0kXt2LsVmjCFIGwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secretario - Sistema de Gestión</title>
+  <script type="module" crossorigin src="/assets/index-XWTy2uCx.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vendor-react-DMD9iZiJ.js">
+  <link rel="modulepreload" crossorigin href="/assets/vendor-pdf-Cl_It8Oa.js">
+  <link rel="modulepreload" crossorigin href="/assets/vendor-leaflet-yfmSjeq2.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-CpuGn9LV.css">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container navbar-content">
-            <div class="navbar-brand">
-                <img src="logo.png" 
-                     alt="Secretario Logo" class="navbar-logo">
-                <span>Secretario</span>
-            </div>
-            
-            <!-- Hamburger Menu Button (Mobile) -->
-            <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <ul class="navbar-menu" id="navMenu">
-                <li><a href="#" data-page="dashboard" class="active">Inicio</a></li>
-                <li><a href="#" data-page="publicadores">Publicadores</a></li>
-                <li><a href="#" data-page="asistencias">Asistencias</a></li>
-                <li><a href="#" data-page="informes">Informes</a></li>
-                <li><a href="#" data-page="secretario">Servicios</a></li>
-                <li><a href="#" data-page="fillpdf">Reportes PDF</a></li>
-            </ul>
-            
-            <div class="navbar-actions">
-                <div class="user-info hidden" id="userInfo">
-                    <div class="user-avatar" id="userAvatar">U</div>
-                    <span id="userName">Usuario</span>
-                </div>
-                <button class="btn btn-primary btn-sm" id="loginBtn">Iniciar Sesión</button>
-                <button class="btn btn-secondary btn-sm hidden" id="logoutBtn">Cerrar Sesión</button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container" id="appContent">
-            <!-- Dynamic content will be loaded here -->
-        </div>
-    </main>
-
-    <!-- Login/Signup Modal -->
-    <div class="modal-overlay" id="authModal">
-        <div class="modal">
-            <div class="modal-header">
-                <h3 class="modal-title" id="authModalTitle">Iniciar Sesión</h3>
-                <button class="modal-close" id="closeAuthModal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <!-- Login Form -->
-                <form id="loginForm" class="auth-form">
-                    <div class="form-group">
-                        <label class="form-label" for="loginUsername">Nombre de Usuario</label>
-                        <input type="text" class="form-input" id="loginUsername" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="loginPassword">Contraseña</label>
-                        <input type="password" class="form-input" id="loginPassword" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Entrar</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Toast Container -->
-    <div class="toast-container" id="toastContainer"></div>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-    <script type="module" src="app.js"></script>
+  <div id="root"></div>
 </body>
+
 </html>
